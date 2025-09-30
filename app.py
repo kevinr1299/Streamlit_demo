@@ -9,6 +9,7 @@ with st.form("upload_form"):
     submit_button = st.form_submit_button("Submit")
 
     if submit_button and uploaded_file is not None:
+        st.write("File uploaded successfully!")
         df = pd.read_excel(uploaded_file)
         st.write("DataFrame:")
         st.dataframe(df)
